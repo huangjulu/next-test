@@ -3,13 +3,13 @@
 const isProd = process.env.NODE_ENV === 'production'; // npm run build
 
 const nextConfig = {
-    assetPrefix: isProd ? '/your-repository-name/' : '',
+    assetPrefix: isProd ? '/next-test/' : '',
     basePath: isProd ? '/next-test' : '',
     output:'export',
     distDir:'dist',
     images: {
         loader: 'default',
-        path: '/',
+        path: '/next-test/',
       },
 };
 
