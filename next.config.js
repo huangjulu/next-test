@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production'; // npm run build
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const nextConfig = {
-    assetPrefix: isProd ? '/next-test/' : '',
-    basePath: isProd ? '/next-test' : '',
+    assetPrefix: basePath,
+    basePath: basePath,
     output:'export',
     distDir:'dist',
     images: {
         loader: 'default',
-        path: '/next-test/',
+        path: `${basePath}/`,
       },
 };
 
